@@ -1,0 +1,21 @@
+.item {
+  display: flex;
+  gap: 20px;
+}
+.item {
+    margin-bottom: 15px;
+}
+.poster {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+
+  border-radius: 15px;
+}
+.textPart {
+    max-width: 900px;
+}
+.title {
+}
+.desc {
+}

@@ -1,0 +1,16 @@
+.nav {
+  padding-top: 10px;
+  display: flex;
+  
+  border-bottom: 1px solid #04594e54;
+  background-color: #f9fffe;
+}
+.link {
+  padding: 15px 40px;
+  color: inherit;
+}
+.active {
+  background-color: #b9fff7;
+  border-radius: 7px 7px 0 0;
+  color: #04594e;
+}

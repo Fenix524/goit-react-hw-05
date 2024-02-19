@@ -1,0 +1,24 @@
+.searchFilmsForm {
+  width: 400px;
+  height: 60px;
+  margin-top: 30px;
+
+  display: flex;
+}
+.searchFilmsForm * {
+  border: 1px solid transparent;
+}
+.input {
+  font-size: 20px;
+  height: inherit;
+  flex-grow: 1;
+
+  border: 2px solid #07ae842a;
+}
+.btn {
+  width: 70px;
+  height: inherit;
+  background-color: #07ae84;
+
+  cursor: pointer;
+}

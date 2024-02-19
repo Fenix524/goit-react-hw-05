@@ -1,0 +1,30 @@
+.movieInfo {
+    display: flex;
+}
+.img {
+    width: 40%;
+    object-fit: cover;
+}
+.textSide {
+    width: 60%;
+    padding: 20px;
+
+    border-bottom: 2px solid #00000033;
+}
+.title {
+    font-size: 36px;
+}
+.title2 {
+    font-size: 25px;
+}
+.text {
+}
+.bottom {
+}
+.link {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #00000013;
+    border-radius: 10px;
+}
