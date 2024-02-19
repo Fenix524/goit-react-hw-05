@@ -9,6 +9,7 @@ import MovieReviews from "./components/MovieReviews/MovieReviews";
 
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
   const buildLinkClass = ({ isActive }) => {
@@ -25,6 +26,7 @@ function App() {
           <Route path="cast" element={<MovieCast />} />
           <Route path="reviews" element={<MovieReviews />} />
         </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
 
       {/* <Outlet /> */}
