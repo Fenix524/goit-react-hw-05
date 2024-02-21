@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import css from "./FilmList.module.css";
 import { generateImgPath } from "../../api";
-import getCurrentPath from "../../js/getLocation";
 
 const FilmList = ({ films }) => {
   const location = useLocation();

@@ -8,15 +8,18 @@ import { useSearchParams } from "react-router-dom";
 
 const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [searchFilter, setSearchFilter] = useState(
-    searchParams.get("query") || ""
-  );
+  // const [searchFilter, setSearchFilter] = useState(
+  //   searchParams.get("query") || ""
+  // );
   const [filterFilmList, setFilterFilmList] = useState([]);
+  const searchFilter = searchParams.get("query") || "";
 
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    if (!searchFilter.length) return;
+
     setError(false);
     setLoading(true);
 
@@ -35,7 +38,6 @@ const MoviesPage = () => {
 
   const searchFormSubmit = (value) => {
     setSearchParams({ query: value });
-    setSearchFilter(value);
   };
 
   return (

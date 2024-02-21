@@ -13,6 +13,8 @@ const MovieReviews = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    if (!movieId) return;
+
     setLoading(true);
     setError(false);
     getReviewsByID(movieId)
@@ -40,7 +42,9 @@ const MovieReviews = () => {
             </li>
           ))}
         </ul>
-        {!error && !reviews.length && <p>There are no reviews for this movie</p>}
+        {!error && !reviews.length && (
+          <p>There are no reviews for this movie</p>
+        )}
       </div>
       {loading && <Loader />}
       {error && <p>Something went wrong, try reloading the page!</p>}
