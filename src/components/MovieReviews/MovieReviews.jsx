@@ -19,17 +19,15 @@ const MovieReviews = () => {
     setError(false);
     getReviewsByID(movieId)
       .then((data) => {
-        // console.log(data);
         setReviews(data.results);
       })
-      .catch((error) => {
-        // console.log(error);
+      .catch(() => {
         setError(true);
       })
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [movieId]);
 
   return (
     <>

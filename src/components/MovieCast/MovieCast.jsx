@@ -19,17 +19,15 @@ const MovieCast = () => {
     setError(false);
     getCreditsByID(movieId)
       .then((data) => {
-        // console.log(data);
         setCast(data.cast);
       })
-      .catch((error) => {
-        // console.log(error);
+      .catch(() => {
         setError(true);
       })
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [movieId]);
 
   return (
     <>

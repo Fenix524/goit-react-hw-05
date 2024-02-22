@@ -13,7 +13,6 @@ const MovieDetailsPage = () => {
   const [loading, setLoading] = useState(false);
 
   const location = useLocation();
-
   const backLink = useRef(location.state?.from ?? "/");
 
   useEffect(() => {
@@ -25,7 +24,6 @@ const MovieDetailsPage = () => {
     getFilmsByID(movieId)
       .then((data) => {
         setFilm(data);
-        // console.log(data);
       })
       .catch(() => {
         setError(true);
@@ -33,9 +31,8 @@ const MovieDetailsPage = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [movieId]);
 
-  // console.log(movieId);
   return (
     <div className={css.MovieDetailsPage}>
       <Link to={backLink.current} className={css.goBackBtn}>
